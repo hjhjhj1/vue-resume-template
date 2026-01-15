@@ -110,7 +110,7 @@ div.portfolio-item {
 
     width: 100%;
     height: 100%;
-    background-color: darken($default-section-background, 1%);
+    background-color: var(--section-background-darken-1);
     border-radius: 30px;
     @include media-breakpoint-down(sm) {
         border-radius: 15px;

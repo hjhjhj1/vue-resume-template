@@ -125,7 +125,7 @@ div.sidebar-column {
 
 div.content-column {
     width: 100%;
-    background-color: $default-section-background;
+    background-color: var(--section-background);
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
         margin-bottom: $nav-tab-controller-height;
     }

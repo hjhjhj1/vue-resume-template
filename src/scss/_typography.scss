@@ -48,7 +48,7 @@ $texts-base-sizes: (
     }
 
     &-default {
-        color: $text-default-color!important;
+        color: var(--text-color)!important;
     }
 
     @for $i from 1 through length($light-shades-palette) {
@@ -80,7 +80,7 @@ a {
     }
 
     &.link-disabled {
-        color: $text-default-color;
+        color: var(--text-color);
         opacity: 0.9;
         pointer-events: none;
     }

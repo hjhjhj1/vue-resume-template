@@ -185,14 +185,14 @@ input, textarea {
 
 /** --------------- COLORS --------------- **/
 input, textarea {
-    background-color: lighten($default-section-background, 3%);
+    background-color: var(--section-background-lighten-3);
     border-color: $light-3;
     border-width: 2px;
     color: $dark;
     transition: none;
 
     &:focus {
-        background-color: lighten($default-section-background, 4%);
+        background-color: var(--section-background-lighten-4);
         border-color: $primary;
         color: $dark;
         box-shadow: none;

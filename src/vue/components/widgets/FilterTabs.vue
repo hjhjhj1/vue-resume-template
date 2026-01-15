@@ -58,8 +58,8 @@ button.btn {
     min-width: 25%;
     outline: none !important;
     box-shadow: none !important;
-    border-color: $default-section-background!important;
-    background-color: darken($default-section-background, 2%);
+    border-color: var(--section-background)!important;
+    background-color: var(--section-background-darken-2);
     color: $light-7;
     transition: 0.1s background-color ease-out;
 
@@ -69,12 +69,12 @@ button.btn {
     }
 
     &:hover {
-        background-color: darken($default-section-background, 5%);
+        background-color: var(--section-background-darken-5);
         color: black;
     }
 
     &:focus, &:active {
-        background-color: darken($default-section-background, 7%);
+        background-color: var(--section-background-darken-7);
         color: black;
     }
 
