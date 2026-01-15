@@ -6,13 +6,19 @@
                      :model="section"
                      :active="_isSectionActive(section)"/>
         </NavigationWrapper>
+        <PrintPreviewModal
+            :is-open="isPrintPreviewOpen"
+            :resume-content="resumeContent"
+            @close="closePrintPreview"
+        />
     </div>
 </template>
 
 <script setup>
-import {inject, onMounted} from "vue"
+import {inject, onMounted, ref, provide} from "vue"
 import Section from "/src/vue/components/sections/Section.vue"
 import NavigationWrapper from "/src/vue/components/navigation/NavigationWrapper.vue"
+import PrintPreviewModal from "/src/vue/components/modals/project/PrintPreviewModal.vue"
 import {useUtils} from "/src/composables/utils.js"
 
 const utils = useUtils()
@@ -28,6 +34,28 @@ const sections = inject("sections")
 
 /** @type {{value: Section}} */
 const currentSection = inject("currentSection")
+
+const isPrintPreviewOpen = ref(false)
+const resumeContent = ref('')
+
+const openPrintPreview = () => {
+  const resumeElement = document.getElementById('resume')
+  if (resumeElement) {
+    resumeContent.value = resumeElement.innerHTML
+    isPrintPreviewOpen.value = true
+  }
+}
+
+const closePrintPreview = () => {
+  isPrintPreviewOpen.value = false
+}
+
+const printResume = () => {
+  openPrintPreview()
+}
+
+provide('openPrintPreview', openPrintPreview)
+provide('closePrintPreview', closePrintPreview)
 
 /**
  * @description This hook can be used to report a visit to an external analytics service.
