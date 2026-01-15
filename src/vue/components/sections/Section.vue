@@ -65,6 +65,11 @@ section.resume-section {
         min-height: 900px;
     }
 
+    @media print {
+        min-height: auto;
+        page-break-inside: avoid;
+    }
+
     &-svh {
         min-height: 100vh;
         min-height: 100svh;

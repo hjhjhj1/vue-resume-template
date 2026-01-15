@@ -13,6 +13,15 @@
                                 :current-section="highlightedSection"
                                 :shrink="toggled"
                                 @link-clicked="_onLinkClicked"/>
+
+            <button
+                @click="openPrintPreview"
+                class="print-button"
+                title="打印/导出 PDF"
+            >
+                <span class="icon">📄</span>
+                <span v-if="!toggled" class="text">打印</span>
+            </button>
         </div>
 
         <!-- Footer -->
@@ -69,6 +78,8 @@ const _onLinkClicked = (section) => {
 const _onToggle = () => {
     emit('toggle', !props.toggled)
 }
+
+const openPrintPreview = inject('openPrintPreview')
 </script>
 
 <style lang="scss" scoped>
@@ -105,6 +116,35 @@ div.nav-sidebar-content {
     justify-content: center;
     @media (max-height: $nav-sidebar-footer-compress-screen-height) {
         height: calc(100% - $nav-sidebar-footer-height-compressed);
+    }
+}
+
+.print-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    margin: 16px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+
+    &:hover {
+        background: rgba(255,255,255,0.2);
+        transform: translateY(-2px);
+    }
+
+    .icon {
+        font-size: 18px;
+    }
+
+    .text {
+        font-weight: 500;
     }
 }
 

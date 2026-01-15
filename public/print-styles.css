@@ -1,0 +1,97 @@
+@media print {
+  body {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  .navigation,
+  .nav-wrapper,
+  .nav-sidebar,
+  .nav-mobile-header,
+  .nav-toggle-button,
+  .nav-control-all-at-once,
+  .nav-control-one-at-once,
+  .nav-pills-controller,
+  .nav-tab-controller,
+  .filter-tabs,
+  .language-picker,
+  .options-list,
+  .alert,
+  .copy-button,
+  .fa-button,
+  .xl-button,
+  .social-links,
+  .modal,
+  .modal-backdrop,
+  .modal-overlay,
+  button,
+  input,
+  textarea,
+  select,
+  .print-button,
+  .modal-close {
+    display: none !important;
+  }
+
+  .section {
+    page-break-inside: avoid;
+  }
+
+  .article {
+    page-break-inside: avoid;
+  }
+
+  .article-title {
+    page-break-after: avoid;
+  }
+
+  .article-timeline-item {
+    page-break-inside: avoid;
+  }
+
+  .article-portfolio-item {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  a::after {
+    content: ' (' attr(href) ')';
+    font-size: 10px;
+    color: #666;
+  }
+
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+
+  @page :first {
+    margin-top: 30mm;
+  }
+}
+
+.print-preview-container {
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+@media screen {
+  .print-preview-container .section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+  }
+}

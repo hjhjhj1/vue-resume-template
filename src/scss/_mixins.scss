@@ -21,3 +21,14 @@
         }
     }
 }
+
+// This mixin ensures that elements are not split across pages when printing
+@mixin page-break-avoid() {
+    page-break-inside: avoid;
+    page-break-after: avoid;
+}
+
+// This mixin creates page break styles
+@mixin page-break() {
+    page-break-before: always;
+}
