@@ -1,19 +1,23 @@
 <template>
     <div v-if="didLoadAllJsonFiles" id="resume">
-        <NavigationWrapper>
+        <NavigationWrapper @print="showPrintPreview = true">
             <Section v-for="section in sections"
                      :presentation-mode="String(presentationMode)"
                      :model="section"
                      :active="_isSectionActive(section)"/>
         </NavigationWrapper>
+        <PrintPreviewModal v-if="showPrintPreview" @close="showPrintPreview = false"/>
     </div>
 </template>
 
 <script setup>
-import {inject, onMounted} from "vue"
+import {inject, onMounted, ref} from "vue"
 import Section from "/src/vue/components/sections/Section.vue"
 import NavigationWrapper from "/src/vue/components/navigation/NavigationWrapper.vue"
+import PrintPreviewModal from "/src/vue/components/modals/print/PrintPreviewModal.vue"
 import {useUtils} from "/src/composables/utils.js"
+
+const showPrintPreview = ref(false)
 
 const utils = useUtils()
 

@@ -17,7 +17,8 @@
 
         <!-- Footer -->
         <NavSidebarFooter :shrink="toggled"
-                          :credits="localize(profile.locales, 'credits')"/>
+                          :credits="localize(profile.locales, 'credits')"
+                          @print="_onPrint"/>
     </nav>
 </template>
 
@@ -35,7 +36,7 @@ const props = defineProps({
     highlightedSection: Object
 })
 
-const emit = defineEmits(['toggle', 'select'])
+const emit = defineEmits(['toggle', 'select', 'print'])
 
 /** @type {{value: Profile}} */
 const profile = inject("profile")
@@ -68,6 +69,10 @@ const _onLinkClicked = (section) => {
 
 const _onToggle = () => {
     emit('toggle', !props.toggled)
+}
+
+const _onPrint = () => {
+    emit('print')
 }
 </script>
 
