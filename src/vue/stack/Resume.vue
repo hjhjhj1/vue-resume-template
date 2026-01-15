@@ -61,7 +61,7 @@ const _isSectionActive = (section) => {
     min-height: 100vh;
     background-color: $nav-background;
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
-        background-color: $default-section-background;
+        background-color: var(--section-background);
     }
 }
 </style>

@@ -3,6 +3,11 @@
         <div class="nav-sidebar-footer-language-picker-wrapper">
             <LanguagePicker :shrink="shrink"/>
         </div>
+        <button class="nav-sidebar-footer-theme-toggle"
+                @click="toggleTheme">
+                <span v-if="currentTheme === 'light'">🌙</span>
+                <span v-else>☀️</span>
+            </button>
         <div v-if="!shrink"
              class="nav-sidebar-footer-credits">
             <span v-html="credits"/>
@@ -12,11 +17,14 @@
 
 <script setup>
 import LanguagePicker from "/src/vue/components/widgets/LanguagePicker.vue"
+import { useTheme } from "/src/composables/useTheme.js"
 
 const props = defineProps({
     credits: String,
     shrink: Boolean
 })
+
+const { currentTheme, toggleTheme } = useTheme()
 </script>
 
 <style lang="scss" scoped>
@@ -40,6 +48,20 @@ div.nav-sidebar-footer-language-picker-wrapper {
     padding-bottom: 5px;
     @media (max-height: 650px) {
         padding-bottom: 0;
+    }
+}
+
+button.nav-sidebar-footer-theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px 0;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.1);
     }
 }
 

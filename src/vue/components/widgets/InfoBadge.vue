@@ -21,7 +21,7 @@ div.info-badge {
     align-items: center;
     justify-content: start;
 
-    background-color: lighten($default-section-background, 3%);
+    background-color: var(--section-background-lighten-3);
     border: 1px solid rgba(black, 0.1);
     border-radius: $default-border-radius;
     white-space: nowrap;

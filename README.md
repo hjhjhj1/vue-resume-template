@@ -22,8 +22,8 @@ Here's a list of live versions of the template:
 
 | #     | Version                | Description                                              | URL                                                                  |
 |-------|------------------------|----------------------------------------------------------|----------------------------------------------------------------------|
-| 🟣    | Roy Sheppard (default) | Latest deployment of the template here on GitHub pages.  | [Preview](https://ryanbalieiro.github.io/vue-resume-template/)       | 
-| 🟢    | Alana Richard          | An example of how the template can be customized.        | [Preview](https://ryansandbox.github.io/alana-richard-vue-resume/)   |  
+| 🟣    | Roy Sheppard (default) | Latest deployment of the template here on GitHub pages.  | [Preview](https://ryanbalieiro.github.io/vue-resume-template/)       |
+| 🟢    | Alana Richard          | An example of how the template can be customized.        | [Preview](https://ryansandbox.github.io/alana-richard-vue-resume/)   |
 | 🔵    | Gabriel Becker         | Another example of how the template can be customized.   | [Preview](https://ryansandbox.github.io/gabriel-becker-vue-resume/)  |
 
 ## Layout and concept
@@ -84,7 +84,7 @@ Watch this step-by-step video tutorial to see exactly how to configure your resu
 | 9   | ArticleThreads and ArticleContactOptions | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=25m36s) |
 | 10  | ArticleContactForm                       | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=29m44s) |
 | 11  | Deploying on GitHub Pages                | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=34m05s) |
-| 12  | Extra deployment instructions            | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=36m20s) |   
+| 12  | Extra deployment instructions            | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=36m20s) |
 
 For step-by-step setup and deployment instructions, you can also check out the following docs:
 - [CONFIGURATION.md](./docs/CONFIGURATION.md) – learn how to configure and customize the project.
@@ -107,3 +107,18 @@ Additional frameworks and plugins used include:
 Code released under the [MIT](https://opensource.org/license/mit) license, providing complete freedom for utilization. Feel free to enhance and adapt it to suit your needs.
 
 Oh... and if you like this template, don't forget to **give it a ⭐** :)
+
+首轮报错
+plugin:vite:css [sass] $color: var(--section-background, #f1eff3) is not a color.
+
+2轮对话 修复plugin:vite:css [sass] $color: var(--section-background, #f1eff3) is not a color.
+原因是 $default-section-background 变量被设置为 CSS 变量 var(--section-background, #f1eff3) ，而 Sass 的 rgba() 函数无法处理 CSS 变量作为颜色值。
+
+3轮对话 点击主题切换没有效果
+CSS 选择器优先级问题 ：深色主题的 CSS 变量选择器从 [data-theme="dark"] 改为 html[data-theme="dark"] ，增加了选择器的特异性，确保主题样式能正确覆盖默认值。
+修复后主题切换还是没有效果
+
+为了找出错误原因对话了4轮
+4轮对话 还是没有效果
+修复了 在 _variables.scss 中定义了完整的主题变量系统
+修改了 所有使用 $default-section-background 和 $text-default-color 的组件

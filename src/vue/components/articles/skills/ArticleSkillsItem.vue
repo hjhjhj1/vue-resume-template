@@ -162,7 +162,7 @@ div.skills-item-icon {
             sm:     (border-width:0),
         ));
 
-        border: 4px solid $default-section-background;
+        border: 4px solid var(--section-background);
     }
 
     &-shrink {
@@ -204,22 +204,22 @@ span.skills-item-header-title {
 }
 
 div.skills-item-progress-display {
-    @include generate-dynamic-styles-with-hash((
-        xxxl:   (margin-top: 4px, height: 9px),
-        md:     (margin-top: 3px),
-        sm:     (margin-top: 2px),
-    ));
+        @include generate-dynamic-styles-with-hash((
+            xxxl:   (margin-top: 4px, height: 9px),
+            md:     (margin-top: 3px),
+            sm:     (margin-top: 2px),
+        ));
 
-    width: 100%;
-    background-color: rgba($dark, 0.05);
-    border: 1px solid rgba(black, 0.1);
-    padding: 1px;
+        width: 100%;
+        background-color: var(--progress-bar-bg, rgba($dark, 0.05));
+        border: 1px solid rgba(black, 0.1);
+        padding: 1px;
 
-    div.skills-item-progress-display-fill {
-        background-color: $primary;
-        height: 100%;
+        div.skills-item-progress-display-fill {
+            background-color: $primary;
+            height: 100%;
+        }
     }
-}
 
 div.skills-item-description {
     @include generate-dynamic-styles-with-hash((

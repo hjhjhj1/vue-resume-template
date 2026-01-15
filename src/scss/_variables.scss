@@ -20,9 +20,13 @@ $danger: #d91c1c;
 $light: #fcfcfc;
 
 /** Layout Colors **/
-$default-section-background: #f1eff3;
+$default-section-background-light: #f1eff3;
+$default-section-background-dark: #1a1a2e;
+$text-default-color-light: #140f29;
+$text-default-color-dark: #eaeaea;
 $loader-background: #261841;
-$text-default-color: #140f29;
+$default-section-background: $default-section-background-light;
+$text-default-color: $text-default-color-light;
 
 /** Nav Colors **/
 $nav-background: #140f29;
@@ -107,10 +111,48 @@ $article-thread-line-color: $article-timeline-line-color;
 $article-thread-circle-base-size: 32px;
 
 /** Chart JS Customization **/
+$default-section-background-light-darken-1: darken($default-section-background-light, 1%);
+$default-section-background-light-darken-2: darken($default-section-background-light, 2%);
+$default-section-background-light-darken-5: darken($default-section-background-light, 5%);
+$default-section-background-light-darken-7: darken($default-section-background-light, 7%);
+$default-section-background-light-lighten-3: lighten($default-section-background-light, 3%);
+$default-section-background-light-lighten-4: lighten($default-section-background-light, 4%);
+
+$default-section-background-dark-darken-1: darken($default-section-background-dark, 1%);
+$default-section-background-dark-darken-2: darken($default-section-background-dark, 2%);
+$default-section-background-dark-darken-5: darken($default-section-background-dark, 5%);
+$default-section-background-dark-darken-7: darken($default-section-background-dark, 7%);
+$default-section-background-dark-lighten-3: lighten($default-section-background-dark, 3%);
+$default-section-background-dark-lighten-4: lighten($default-section-background-dark, 4%);
+
 :root {
-    --chart-js-border-color: #{$default-section-background};
+    --chart-js-border-color: #{$default-section-background-light};
     --chart-js-hover-border-color: #{$light};
     --nav-background-color: #{$nav-background};
+    --section-background: #{$default-section-background-light};
+    --section-background-darken-1: #{$default-section-background-light-darken-1};
+    --section-background-darken-2: #{$default-section-background-light-darken-2};
+    --section-background-darken-5: #{$default-section-background-light-darken-5};
+    --section-background-darken-7: #{$default-section-background-light-darken-7};
+    --section-background-lighten-3: #{$default-section-background-light-lighten-3};
+    --section-background-lighten-4: #{$default-section-background-light-lighten-4};
+    --text-color: #{$text-default-color-light};
+    --progress-bar-bg: rgba($dark, 0.05);
+    --light-5-rgb: 173, 181, 189;
+}
+
+html[data-theme="dark"] {
+    --section-background: #{$default-section-background-dark};
+    --section-background-darken-1: #{$default-section-background-dark-darken-1};
+    --section-background-darken-2: #{$default-section-background-dark-darken-2};
+    --section-background-darken-5: #{$default-section-background-dark-darken-5};
+    --section-background-darken-7: #{$default-section-background-dark-darken-7};
+    --section-background-lighten-3: #{$default-section-background-dark-lighten-3};
+    --section-background-lighten-4: #{$default-section-background-dark-lighten-4};
+    --text-color: #{$text-default-color-dark};
+    --progress-bar-bg: rgba(#fff, 0.1);
+    --light-5-rgb: 100, 100, 100;
+    --chart-js-border-color: #{$default-section-background-dark};
 }
 
 /** Typography - Multipliers (Headers) **/
