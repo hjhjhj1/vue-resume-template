@@ -1,0 +1,157 @@
+@import "variables";
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .navigation-wrapper {
+        flex-direction: column !important;
+    }
+
+    .sidebar-column {
+        display: none !important;
+    }
+
+    .content-column {
+        width: 100% !important;
+        margin-bottom: 0 !important;
+    }
+
+    .nav-mobile-header,
+    .nav-toggle-button,
+    .nav-pills-controller,
+    .nav-pills-controller-fixed,
+    .nav-tab-controller,
+    .nav-sidebar,
+    .nav-fill-top,
+    .btn,
+    button,
+    .social-links,
+    .copy-button,
+    .filter-tabs,
+    .language-picker {
+        display: none !important;
+    }
+
+    .resume-section {
+        page-break-inside: auto;
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    .resume-section-content {
+        max-width: 100% !important;
+        padding: 1rem !important;
+    }
+
+    .section-header {
+        break-after: avoid-page;
+        page-break-after: avoid;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .article {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .article-title {
+        break-after: avoid-page;
+        page-break-after: avoid;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .article-timeline-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .article-skills-item,
+    .article-portfolio-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .print-avoid-break {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .print-avoid-break-after {
+        break-after: avoid-page;
+        page-break-after: avoid;
+    }
+
+    .print-avoid-break-before {
+        break-before: avoid-page;
+        page-break-before: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    a {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+
+    @page {
+        size: A4;
+        margin: 1.5cm;
+
+        @top-center {
+            content: '';
+        }
+
+        @bottom-center {
+            content: counter(page) " of " counter(pages);
+            font-size: 10pt;
+            color: #666;
+        }
+    }
+}
+
+.print-preview-container {
+    .sidebar-column,
+    .nav-mobile-header,
+    .nav-toggle-button,
+    .nav-pills-controller,
+    .nav-pills-controller-fixed,
+    .nav-tab-controller,
+    .nav-sidebar,
+    .nav-fill-top,
+    .btn,
+    button,
+    .social-links,
+    .copy-button,
+    .filter-tabs,
+    .language-picker {
+        display: none !important;
+    }
+
+    .navigation-wrapper {
+        flex-direction: column !important;
+    }
+
+    .content-column {
+        width: 100% !important;
+        margin-bottom: 0 !important;
+    }
+
+    .resume-section {
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    .resume-section-content {
+        max-width: 100% !important;
+    }
+}

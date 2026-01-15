@@ -15,7 +15,8 @@
             <NavSidebar :toggled="navbarToggled"
                         :highlighted-section="controls.highlightedSection"
                         @select="_onSidebarLinkClicked"
-                        @toggle="_onNavToggle"/>
+                        @toggle="_onNavToggle"
+                        @print="_onPrint"/>
         </div>
 
         <!-- Content Columns -->
@@ -61,6 +62,8 @@ import NavPillsController from "/src/vue/components/navigation/tabs/NavPillsCont
 import NavPillsControllerFixed from "/src/vue/components/navigation/tabs/NavPillsControllerFixed.vue"
 import NavFillTop from "/src/vue/components/navigation/layout/NavFillTop.vue"
 
+const emit = defineEmits(['print'])
+
 const constants = useConstants()
 
 /** @type {{value: String}} */
@@ -90,6 +93,10 @@ const _onTabControllerLinkClicked = (option) => {
 
 const _onNavToggle = (value) => {
     navbarToggled.value = value
+}
+
+const _onPrint = () => {
+    emit('print')
 }
 </script>
 
