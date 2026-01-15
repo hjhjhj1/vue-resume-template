@@ -41,7 +41,7 @@ ul.inline-info-list {
     }
 
     span {
-        color: $light-7;
+        color: var(--theme-secondary);
     }
 }
 

@@ -33,7 +33,7 @@
             <div v-if="item.hasPercentage && progressBarAllowed"
                  class="skills-item-progress-display mt-1">
                 <div class="skills-item-progress-display-fill"
-                     :style="`width:${item.percentage}%; background-color: ${item.fallbackFaIconColor}`"/>
+                     :style="`width:${item.percentage}%; background-color: ${item.fallbackFaIconColor}; transition: width 0.3s ease;`"/>
             </div>
 
             <!-- Experience Time -->
@@ -47,7 +47,7 @@
             <!-- Description -->
             <div class="skills-item-description">
                 <p class="text-3 m-0"
-                   :class="experienceTimeDisplay || !progressBarAllowed ? `text-light-7` : ``"
+                   :class="experienceTimeDisplay || !progressBarAllowed ? `text-secondary` : ``"
                    v-html="localize(item.locales, 'description', true)"/>
             </div>
 
@@ -162,7 +162,7 @@ div.skills-item-icon {
             sm:     (border-width:0),
         ));
 
-        border: 4px solid $default-section-background;
+        border: 4px solid var(--theme-border);
     }
 
     &-shrink {
@@ -211,12 +211,13 @@ div.skills-item-progress-display {
     ));
 
     width: 100%;
-    background-color: rgba($dark, 0.05);
-    border: 1px solid rgba(black, 0.1);
+    background-color: var(--theme-progress-background);
+    border: 1px solid var(--theme-progress-border);
     padding: 1px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 
     div.skills-item-progress-display-fill {
-        background-color: $primary;
+        background-color: var(--theme-primary);
         height: 100%;
     }
 }

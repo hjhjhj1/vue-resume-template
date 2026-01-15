@@ -58,9 +58,9 @@ button.btn {
     min-width: 25%;
     outline: none !important;
     box-shadow: none !important;
-    border-color: $default-section-background!important;
-    background-color: darken($default-section-background, 2%);
-    color: $light-7;
+    border-color: var(--theme-border)!important;
+    background-color: var(--theme-card);
+    color: var(--theme-text);
     transition: 0.1s background-color ease-out;
 
     @include media-breakpoint-down(md) {
@@ -69,18 +69,18 @@ button.btn {
     }
 
     &:hover {
-        background-color: darken($default-section-background, 5%);
-        color: black;
+        background-color: var(--theme-hover);
+        color: var(--theme-text);
     }
 
     &:focus, &:active {
-        background-color: darken($default-section-background, 7%);
-        color: black;
+        background-color: var(--theme-hover);
+        color: var(--theme-text);
     }
 
     &.active {
-        background-color: $primary;
-        color: $light!important;
+        background-color: var(--theme-primary);
+        color: var(--theme-card)!important;
         opacity: 1;
     }
 }

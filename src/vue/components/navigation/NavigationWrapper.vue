@@ -106,7 +106,7 @@ div.sidebar-column {
     min-width: $nav-sidebar-width;
     width: $nav-sidebar-width;
     min-height: 100%;
-    background-color: $nav-background;
+    background-color: var(--theme-nav-background);
 
     @include media-breakpoint-down(xl) {
         min-width: $nav-sidebar-width-lg;
@@ -125,7 +125,7 @@ div.sidebar-column {
 
 div.content-column {
     width: 100%;
-    background-color: $default-section-background;
+    background-color: var(--theme-background);
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
         margin-bottom: $nav-tab-controller-height;
     }

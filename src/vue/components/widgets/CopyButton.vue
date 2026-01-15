@@ -71,17 +71,17 @@ button.copy-button {
     background-color: transparent;
     border: none;
     outline: none;
-    color: $light-6;
+    color: var(--theme-secondary);
     padding: 0 8px;
 
     &:hover {
-        color: $primary;
+        color: var(--theme-primary);
     }
 }
 
 button.copy-button-disabled {
     opacity: 0.8;
-    color: $light-6!important;
+    color: var(--theme-secondary)!important;
     user-select: none!important;
     pointer-events: none!important;
 }

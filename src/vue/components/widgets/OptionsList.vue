@@ -17,7 +17,8 @@
                        v-html="item.value"/>
 
                     <a v-else
-                       class="m-0 text-3 text-light-7"
+                       class="m-0 text-3"
+                       style="color: var(--theme-secondary)"
                        v-html="item.value"/>
 
                     <CopyButton v-if="item.copy"

@@ -59,9 +59,10 @@ const _isSectionActive = (section) => {
 #resume {
     display: flex;
     min-height: 100vh;
-    background-color: $nav-background;
+    background-color: var(--theme-nav-background);
+    transition: background-color 0.3s ease;
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
-        background-color: $default-section-background;
+        background-color: var(--theme-background);
     }
 }
 </style>

@@ -109,7 +109,7 @@ img.spinner {
 }
 
 div.image-not-found-fallback {
-    background-color: rgba(black, 0.2);
+    background-color: var(--theme-hover);
     border-radius: 20px;
 
     width: 100%;
@@ -119,6 +119,6 @@ div.image-not-found-fallback {
     align-items: center;
     justify-content: center;
     font-size: 30px;
-    color: $light-2;
+    color: var(--theme-secondary);
 }
 </style>

@@ -4,15 +4,16 @@ html {
 }
 
 body {
-    background-color: $loader-background;
+    background-color: var(--theme-nav-background);
+    transition: background-color 0.3s ease;
 }
 
 body.body-default {
-    background-color: $default-section-background;
+    background-color: var(--theme-background);
 }
 
 body.body-nav-contrast {
-    background-color: darken($nav-background, 3%)!important;
+    background-color: var(--theme-nav-background)!important;
 }
 
 /** ----------- SELECTION ------------- **/
@@ -28,5 +29,5 @@ body.body-nav-contrast {
 
 /** ----------- SHADOWS ---------------- **/
 .trace-shadow {
-    box-shadow: rgba(0, 0, 0, 0.1) 5px 5px, rgba(10, 10, 10, 0.15) 10px 10px;
+    box-shadow: var(--theme-shadow) 5px 5px, var(--theme-shadow) 10px 10px;
 }

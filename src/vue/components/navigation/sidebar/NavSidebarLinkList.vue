@@ -106,9 +106,9 @@ li.nav-sidebar-link-li-container {
 }
 
 ::-webkit-scrollbar {max-width: 8px; max-height: 4px}
-::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5)}
-::-webkit-scrollbar-thumb {background: lighten($nav-background, 20%);-webkit-box-shadow: rgba(155,155,155)}
-::-webkit-scrollbar-thumb:window-inactive {background: lighten($nav-background, 10%);}
+::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px var(--theme-shadow)}
+::-webkit-scrollbar-thumb {background: var(--theme-nav-text);-webkit-box-shadow: var(--theme-shadow)}
+::-webkit-scrollbar-thumb:window-inactive {background: var(--theme-nav-text)}
 
 button.nav-sidebar-link {
     background: transparent;
@@ -120,14 +120,16 @@ button.nav-sidebar-link {
     text-align: left;
 
     i {
-        color: $nav-contrast-10;
+        color: var(--theme-nav-text);
+        opacity: 0.1;
         min-width: 45px;
         text-align: center;
         transition: 0.2s color ease-in;
     }
 
     span {
-        color: $nav-contrast-70;
+        color: var(--theme-nav-text);
+        opacity: 0.7;
         transition: 0.2s color ease-in;
     }
 }
@@ -135,17 +137,19 @@ button.nav-sidebar-link {
 /** Hover Status **/
 button.nav-sidebar-link:hover {
     i, span {
-        color: $nav-hover!important;
+        color: var(--theme-primary)!important;
     }
 }
 
 button.nav-sidebar-link-no-hover:hover {
     i {
-        color: $nav-contrast-10!important;
+        color: var(--theme-nav-text)!important;
+        opacity: 0.1!important;
     }
 
     span {
-        color: $nav-contrast-70!important;
+        color: var(--theme-nav-text)!important;
+        opacity: 0.7!important;
     }
 }
 
@@ -154,11 +158,11 @@ li.nav-sidebar-link-li-container-selected {
     //pointer-events: none;
     button.nav-sidebar-link {
         i {
-            color: $nav-highlight!important;
+            color: var(--theme-primary)!important;
         }
 
         span {
-            color: $nav-selected!important;
+            color: var(--theme-primary)!important;
         }
     }
 }
@@ -195,7 +199,8 @@ div.nav-sidebar-links-wrapper-shrink {
 
         i {
             font-size: 1.2rem;
-            color: $nav-contrast-20;
+            color: var(--theme-nav-text);
+            opacity: 0.2;
             @media (max-height: 560px) {
                 font-size: 1.1rem;
             }
@@ -203,10 +208,10 @@ div.nav-sidebar-links-wrapper-shrink {
 
         span {
             position: absolute;
-            background-color: $nav-highlight;
-            color: $black!important;
+            background-color: var(--theme-primary);
+            color: var(--theme-text)!important;
             border-radius: $default-border-radius;
-            border: 2px solid darken($nav-highlight, 2%);
+            border: 2px solid var(--theme-primary);
 
             font-size: 0.9rem;
             text-transform: none;
@@ -233,7 +238,7 @@ div.nav-sidebar-links-wrapper-shrink {
                 margin-left: -6px;
                 border-width: 5px;
                 border-style: solid;
-                border-color: transparent darken($nav-highlight, 2%) transparent transparent;
+                border-color: transparent var(--theme-primary) transparent transparent;
             }
         }
     }

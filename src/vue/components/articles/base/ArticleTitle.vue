@@ -36,7 +36,7 @@ h3.article-title {
 
     i {
         opacity: 0.95;
-        color: $nav-background-selected;
+        color: var(--theme-primary);
     }
 }
 </style>

@@ -88,7 +88,7 @@ nav.nav-mobile-tab-controller {
     position: fixed;
     width: 100%;
     height: $nav-tab-controller-height;
-    background-color: $nav-background;
+    background-color: var(--theme-nav-background);
     bottom: 0;
     left: 0;
     z-index: $z-index-tab-controller;
@@ -96,7 +96,7 @@ nav.nav-mobile-tab-controller {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    transition: 0.1s height ease-out;
+    transition: 0.1s height ease-out, background-color 0.3s ease;
 
     @include media-breakpoint-up($navigation-sidebar-breakpoint) {
         display: none;
@@ -121,11 +121,12 @@ button.nav-mobile-tab-button {
     background-color: transparent;
     border: 0;
     outline: none;
-    border-top: 2px solid lighten($nav-background, 20%);
+    border-top: 2px solid var(--theme-border);
     transition: 0.1s padding-bottom ease-out;
 
     i {
-        color: $nav-contrast-20;
+        color: var(--theme-nav-text);
+        opacity: 0.2;
         font-size: 1rem;
         @include media-breakpoint-down(sm) {
             font-size: 0.9rem;
@@ -133,7 +134,8 @@ button.nav-mobile-tab-button {
     }
 
     span {
-        color: $nav-contrast-40;
+        color: var(--theme-nav-text);
+        opacity: 0.4;
         font-size: 0.8rem;
         margin-top: 3px;
 
@@ -145,18 +147,18 @@ button.nav-mobile-tab-button {
 
 button.nav-mobile-tab-button:hover {
     i, span {
-        color: $nav-highlight;
+        color: var(--theme-primary);
     }
 }
 
 button.nav-mobile-tab-button-selected {
-    background-color: $nav-background-selected;
-    border-top-color: $nav-selected;
+    background-color: var(--theme-hover);
+    border-top-color: var(--theme-primary);
     i {
-        color: $nav-selected!important;
+        color: var(--theme-primary)!important;
     }
     span {
-        color: $nav-highlight!important;
+        color: var(--theme-primary)!important;
     }
 }
 

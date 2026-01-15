@@ -110,7 +110,7 @@ div.portfolio-item {
 
     width: 100%;
     height: 100%;
-    background-color: darken($default-section-background, 1%);
+    background-color: var(--theme-hover);
     border-radius: 30px;
     @include media-breakpoint-down(sm) {
         border-radius: 15px;
@@ -210,7 +210,7 @@ div.portfolio-item-content-wrapper {
         transition: all ease-in-out 0.25s;
 
         &-content {
-            color: $white;
+            color: var(--theme-card);
         }
     }
 
@@ -219,7 +219,7 @@ div.portfolio-item-content-wrapper {
         border: none;
         padding: 0;
         background-color: transparent;
-        color: $dark;
+        color: var(--theme-text);
         font-weight: bold;
         font-size: calc(var(--base-title-size) * var(--proportion));
         margin-top: calc(19px * var(--proportion));
@@ -229,7 +229,7 @@ div.portfolio-item-content-wrapper {
 
     p.portfolio-item-category {
         padding: 0;
-        color: $light-7!important;
+        color: var(--theme-secondary)!important;
         font-size: calc(var(--base-title-size)*0.73 * var(--proportion));
         margin: 0;
         @include media-breakpoint-up(lg) {

@@ -84,7 +84,8 @@ nav.nav-sidebar {
     min-width: $nav-sidebar-width;
     width: $nav-sidebar-width;
     z-index: $z-index-sidebar;
-    background-color: $nav-background;
+    background-color: var(--theme-nav-background);
+    transition: background-color 0.3s ease;
 
     @include media-breakpoint-down(xl) {
         min-width: $nav-sidebar-width-lg;

@@ -98,7 +98,7 @@ const _onLanguageSelected = (language) => {
         setSelectedLanguageWithId(language.id)
         return
     }
-    
+
     setSpinnerEnabled(true, strings.value.getTranslation("changing_language", language, language))
     setTimeout(() => {
         setSelectedLanguageWithId(language.id)
@@ -115,7 +115,7 @@ button.dropdown-toggle {
     background-color: transparent;
     padding: 10px 15px;
     border-radius: $default-border-radius;
-    color: $nav-contrast;
+    color: var(--theme-nav-text);
     opacity: 0.9;
     outline: none;
 
@@ -158,9 +158,9 @@ ul.dropdown-menu {
 
 button.dropdown-item {
     padding: 10px 15px;
-    color: $nav-contrast;
+    color: var(--theme-nav-text);
     &:hover {
-        background-color: $primary;
+        background-color: var(--theme-primary);
     }
 }
 

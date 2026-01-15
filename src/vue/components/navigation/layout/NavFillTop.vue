@@ -41,7 +41,7 @@ div.nav-fill-top {
     top: -95px;
     width: 100%;
     height: 100px;
-    background-color: $nav-background;
+    background-color: var(--theme-nav-background);
 
     &-hidden {
         visibility: hidden;

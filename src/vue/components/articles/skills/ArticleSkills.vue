@@ -88,7 +88,8 @@ div.chart-wrapper {
     align-items: center;
     justify-content: center;
 
-    background-color: darken($default-section-background, 2%);
+    background-color: var(--theme-card);
+    transition: background-color 0.3s ease;
 
     --proportion: 0.9;
     @media (min-width: 1500px) {--proportion: 0.95;}

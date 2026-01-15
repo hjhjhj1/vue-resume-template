@@ -94,11 +94,11 @@ const _onHidden = () => {
 @import "/src/scss/_theming.scss";
 
 div.modal {
-    background-color: rgba(black, 0.8)
+    background-color: var(--theme-shadow);
 }
 
 div.modal-content {
-    background-color: $light-1;
+    background-color: var(--theme-card);
 
     &-bg-transparent {
         background-color: transparent;

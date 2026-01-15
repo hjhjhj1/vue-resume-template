@@ -123,15 +123,15 @@ a.social-link-size-4 {
 
 a.social-link-color-dark {
     @include create-btn-social-color(
-        $nav-contrast, lighten($nav-background, 10%), lighten($nav-background, 8%),
-        $white, $primary, darken($primary, 3%)
+        var(--theme-nav-text), var(--theme-nav-background), var(--theme-border),
+        var(--theme-card), var(--theme-primary), var(--theme-border)
     )
 }
 
 a.social-link-color-secondary {
     @include create-btn-social-color(
-        $white, $dark, lighten($dark, 10%),
-        $white, $primary, darken($primary, 5%)
+        var(--theme-card), var(--theme-text), var(--theme-border),
+        var(--theme-card), var(--theme-primary), var(--theme-border)
     )
 }
 
@@ -152,8 +152,8 @@ a.social-link-color-light {
 div.social-link-tooltip {
     position: absolute;
     text-transform: capitalize;
-    background-color: $primary;
-    color: $white;
+    background-color: var(--theme-primary);
+    color: var(--theme-card);
     padding: 0.2rem 0.8rem;
     border-radius: 10px;
     display: none;
@@ -166,7 +166,7 @@ div.social-link-tooltip {
         margin-left: -5px;
         border-width: 5px;
         border-style: solid;
-        border-color: $primary transparent transparent transparent;
+        border-color: var(--theme-primary) transparent transparent transparent;
     }
 }
 

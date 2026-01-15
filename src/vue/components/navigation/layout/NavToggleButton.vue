@@ -22,10 +22,10 @@ const faIcon = computed(() => {
 @import "/src/scss/_theming.scss";
 
 button.nav-toggle-button {
-    background-color: $nav-background;
-    color: $nav-contrast-90;
+    background-color: var(--theme-nav-background);
+    color: var(--theme-nav-text);
 
-    border: 2px solid lighten($nav-background, 6%);
+    border: 2px solid var(--theme-border);
     border-radius: 100%;
     width: 35px;
     height: 35px;

@@ -30,10 +30,10 @@ button.fa-button {
 }
 
 button.fa-button-variant-transparent {
-    color: $light-4;
+    color: var(--theme-secondary);
     background-color: transparent;
     &:hover {
-        color: $primary;
+        color: var(--theme-primary);
     }
 }
 
