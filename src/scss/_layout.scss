@@ -8,7 +8,7 @@ body {
 }
 
 body.body-default {
-    background-color: $default-section-background;
+    background-color: var(--theme-bg-secondary);
 }
 
 body.body-nav-contrast {
