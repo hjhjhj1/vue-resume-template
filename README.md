@@ -22,8 +22,8 @@ Here's a list of live versions of the template:
 
 | #     | Version                | Description                                              | URL                                                                  |
 |-------|------------------------|----------------------------------------------------------|----------------------------------------------------------------------|
-| 🟣    | Roy Sheppard (default) | Latest deployment of the template here on GitHub pages.  | [Preview](https://ryanbalieiro.github.io/vue-resume-template/)       | 
-| 🟢    | Alana Richard          | An example of how the template can be customized.        | [Preview](https://ryansandbox.github.io/alana-richard-vue-resume/)   |  
+| 🟣    | Roy Sheppard (default) | Latest deployment of the template here on GitHub pages.  | [Preview](https://ryanbalieiro.github.io/vue-resume-template/)       |
+| 🟢    | Alana Richard          | An example of how the template can be customized.        | [Preview](https://ryansandbox.github.io/alana-richard-vue-resume/)   |
 | 🔵    | Gabriel Becker         | Another example of how the template can be customized.   | [Preview](https://ryansandbox.github.io/gabriel-becker-vue-resume/)  |
 
 ## Layout and concept
@@ -84,7 +84,7 @@ Watch this step-by-step video tutorial to see exactly how to configure your resu
 | 9   | ArticleThreads and ArticleContactOptions | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=25m36s) |
 | 10  | ArticleContactForm                       | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=29m44s) |
 | 11  | Deploying on GitHub Pages                | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=34m05s) |
-| 12  | Extra deployment instructions            | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=36m20s) |   
+| 12  | Extra deployment instructions            | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=36m20s) |
 
 For step-by-step setup and deployment instructions, you can also check out the following docs:
 - [CONFIGURATION.md](./docs/CONFIGURATION.md) – learn how to configure and customize the project.
@@ -107,3 +107,15 @@ Additional frameworks and plugins used include:
 Code released under the [MIT](https://opensource.org/license/mit) license, providing complete freedom for utilization. Feel free to enhance and adapt it to suit your needs.
 
 Oh... and if you like this template, don't forget to **give it a ⭐** :)
+
+实现动态主题切换系统
+支持深色/浅色/模式，主题选择需持久化到localStorage，并在页面加载时应用。要求：切换时需有过渡动画效果，且不影响SVG技能进度条的颜色计算逻辑。
+2轮交互修复[plugin:vite:vue] Element is missing end tag.
+错误是因为在 template 中添加了 div.app-container 元素但忘记添加对应的结束标签
+
+3轮交互报错 TypeError: $setup.localizeStrings is not a function
+在 NavSidebar.vue 中错误地使用了不存在的 localizeStrings 函数，正确的函数名应为 localizeFromStrings （已在 LanguageManager.vue 中提供）。
+1. 将按钮的 :title 属性从 localizeStrings('toggle_theme') 改为 localizeFromStrings('toggle_theme')
+2. 将注入的函数名从 localizeStrings 改为 localizeFromStrings
+
+最终 点击主题按钮没有效果，功能未完成

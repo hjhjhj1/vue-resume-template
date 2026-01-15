@@ -1,0 +1,44 @@
+/** Font Awesome webfonts path **/
+/** Overriding Bootstrap's contrast ratio. **/
+/** Typography **/
+/** Z-Indexes **/
+/** Bootstrap Colors **/
+/** Layout Colors **/
+/** Nav Colors **/
+/** Light Shades **/
+/** Layout Constraints **/
+/** Layout Constraints - Sidebar **/
+/** Layout Constraints - Sidebar Footer **/
+/** Layout Constraints - Mobile Navigation **/
+/** ArticleTimeline Parameters **/
+/** ArticleThread Parameters **/
+/** Theme Variables **/
+:root {
+  --theme-bg-primary: #fcfcfc;
+  --theme-bg-secondary: #f1eff3;
+  --theme-bg-nav: #140f29;
+  --theme-text-primary: #140f29;
+  --theme-text-secondary: #6c757d;
+  --theme-chart-js-border-color: #f1eff3;
+  --theme-chart-js-hover-border-color: #fcfcfc;
+}
+
+[data-theme="dark"] {
+  --theme-bg-primary: #212529;
+  --theme-bg-secondary: #140f29;
+  --theme-bg-nav: #1d163c;
+  --theme-text-primary: #f8f9fa;
+  --theme-text-secondary: #dee2e6;
+  --theme-chart-js-border-color: #140f29;
+  --theme-chart-js-hover-border-color: #1d163c;
+}
+
+/** Chart JS Customization **/
+:root {
+  --chart-js-border-color: var(--theme-chart-js-border-color);
+  --chart-js-hover-border-color: var(--theme-chart-js-hover-border-color);
+  --nav-background-color: var(--theme-bg-nav);
+}
+
+/** Typography - Multipliers (Headers) **/
+/** Typography - Multipliers (Texts) **/

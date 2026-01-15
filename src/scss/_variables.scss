@@ -106,11 +106,32 @@ $article-thread-scale-multipliers: (
 $article-thread-line-color: $article-timeline-line-color;
 $article-thread-circle-base-size: 32px;
 
+/** Theme Variables **/
+:root {
+    --theme-bg-primary: #{$light};
+    --theme-bg-secondary: #{$default-section-background};
+    --theme-bg-nav: #{$nav-background};
+    --theme-text-primary: #{$text-default-color};
+    --theme-text-secondary: #{$light-6};
+    --theme-chart-js-border-color: #{$default-section-background};
+    --theme-chart-js-hover-border-color: #{$light};
+}
+
+:root[data-theme="dark"] {
+    --theme-bg-primary: #{$dark};
+    --theme-bg-secondary: #{$nav-background};
+    --theme-bg-nav: #{$nav-background-selected};
+    --theme-text-primary: #{$light-1};
+    --theme-text-secondary: #{$light-3};
+    --theme-chart-js-border-color: #{$nav-background};
+    --theme-chart-js-hover-border-color: #{$nav-background-selected};
+}
+
 /** Chart JS Customization **/
 :root {
-    --chart-js-border-color: #{$default-section-background};
-    --chart-js-hover-border-color: #{$light};
-    --nav-background-color: #{$nav-background};
+    --chart-js-border-color: var(--theme-chart-js-border-color);
+    --chart-js-hover-border-color: var(--theme-chart-js-hover-border-color);
+    --nav-background-color: var(--theme-bg-nav);
 }
 
 /** Typography - Multipliers (Headers) **/

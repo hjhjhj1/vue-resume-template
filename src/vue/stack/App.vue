@@ -1,4 +1,5 @@
 <template>
+    <div class="app-container">
     <DataManager>
         <WindowObserver>
             <FeedbacksManager>
@@ -12,6 +13,7 @@
             </FeedbacksManager>
         </WindowObserver>
     </DataManager>
+    </div>
 </template>
 
 <script setup>
@@ -22,7 +24,13 @@ import LocationManager from "/src/vue/stack/LocationManager.vue"
 import ModalManager from "/src/vue/stack/ModalManager.vue"
 import WindowObserver from "/src/vue/stack/WindowObserver.vue"
 import Resume from "/src/vue/stack/Resume.vue"
+import { useTheme } from "/src/composables/theme.js"
+
+useTheme()
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+    :root {
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
 </style>

@@ -16,3 +16,8 @@
 
 @import "layout";
 @import "typography";
+
+html {
+    background-color: var(--theme-bg-nav);
+    color: var(--theme-text-primary);
+}
