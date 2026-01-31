@@ -113,6 +113,47 @@ $article-thread-circle-base-size: 32px;
     --nav-background-color: #{$nav-background};
 }
 
+/** Theme Variables (Light - Default) **/
+.theme-light {
+    --theme-bg-primary: #{$light};
+    --theme-bg-secondary: #{$default-section-background};
+    --theme-bg-tertiary: #{$light-1};
+    --theme-text-primary: #{$text-default-color};
+    --theme-text-secondary: #{$light-6};
+    --theme-text-tertiary: #{$light-5};
+    --theme-border-color: #{$light-3};
+    --theme-card-bg: #{$light};
+    --theme-card-shadow: rgba(0, 0, 0, 0.05);
+    --theme-progress-bg: rgba(#{$dark}, 0.05);
+    --theme-progress-border: rgba(black, 0.1);
+    --nav-background-color: #{$nav-background};
+    --nav-background-selected: #{lighten($nav-background, 5)};
+    --nav-text-color: #{$nav-contrast};
+    --nav-text-secondary: #{rgba($nav-contrast, 0.6)};
+    --nav-border-color: #{lighten($nav-background, 10)};
+    color-scheme: light;
+}
+
+.theme-dark {
+    --theme-bg-primary: #121212;
+    --theme-bg-secondary: #1e1e1e;
+    --theme-bg-tertiary: #2a2a2a;
+    --theme-text-primary: #e0e0e0;
+    --theme-text-secondary: #a0a0a0;
+    --theme-text-tertiary: #808080;
+    --theme-border-color: #3a3a3a;
+    --theme-card-bg: #1a1a1a;
+    --theme-card-shadow: rgba(0, 0, 0, 0.3);
+    --theme-progress-bg: rgba(#{$light}, 0.1);
+    --theme-progress-border: rgba(white, 0.1);
+    --nav-background-color: #1a1a2e;
+    --nav-background-selected: #252540;
+    --nav-text-color: #e0e0e0;
+    --nav-text-secondary: rgba(224, 224, 224, 0.6);
+    --nav-border-color: #2a2a4a;
+    color-scheme: dark;
+}
+
 /** Typography - Multipliers (Headers) **/
 $headings-breakpoint-multipliers: (
     xxxl: 1,

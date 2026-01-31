@@ -16,3 +16,116 @@
 
 @import "layout";
 @import "typography";
+
+/** Theme Transition Styles **/
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease !important;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/** Global Theme Styles **/
+body {
+    background-color: var(--theme-bg-primary, #fcfcfc);
+    color: var(--theme-text-primary, #140f29);
+}
+
+.card {
+    background-color: var(--theme-card-bg, #fcfcfc);
+    box-shadow: 0 2px 8px var(--theme-card-shadow, rgba(0, 0, 0, 0.05));
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.border {
+    border-color: var(--theme-border-color, #dee2e6) !important;
+}
+
+.text-muted {
+    color: var(--theme-text-secondary, #6c757d) !important;
+}
+
+/** Section Background **/
+section.section,
+section.resume-section {
+    background-color: var(--theme-bg-secondary, #f1eff3);
+    transition: background-color 0.3s ease;
+}
+
+/** Progress Bar Theme Support **/
+div.skills-item-progress-display {
+    background-color: var(--theme-progress-bg, rgba(33, 37, 41, 0.05)) !important;
+    border-color: var(--theme-progress-border, rgba(0, 0, 0, 0.1)) !important;
+}
+
+div.progress {
+    background-color: var(--theme-progress-bg, rgba(33, 37, 41, 0.05)) !important;
+}
+
+/** Article Timeline Theme Support **/
+div.article-timeline-item-content {
+    background-color: var(--theme-card-bg, #fcfcfc);
+    transition: background-color 0.3s ease;
+}
+
+div.article-timeline-item-content-header {
+    border-bottom-color: var(--theme-border-color, #dee2e6) !important;
+    transition: border-color 0.3s ease;
+}
+
+/** Article Thread Theme Support **/
+div.article-thread-item-content {
+    background-color: var(--theme-card-bg, #fcfcfc);
+    transition: background-color 0.3s ease;
+}
+
+/** Navigation Theme Support **/
+.nav-profile-card {
+    transition: background-color 0.3s ease;
+}
+
+/** Modal Theme Support **/
+.modal-content {
+    background-color: var(--theme-card-bg, #fcfcfc);
+    border-color: var(--theme-border-color, #dee2e6);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.modal-header {
+    border-bottom-color: var(--theme-border-color, #dee2e6);
+    transition: border-color 0.3s ease;
+}
+
+.modal-footer {
+    border-top-color: var(--theme-border-color, #dee2e6);
+    transition: border-color 0.3s ease;
+}
+
+/** Form Controls Theme Support **/
+.form-control,
+.form-select {
+    background-color: var(--theme-card-bg, #fcfcfc);
+    border-color: var(--theme-border-color, #dee2e6);
+    color: var(--theme-text-primary, #140f29);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+
+    &:focus {
+        background-color: var(--theme-card-bg, #fcfcfc);
+        color: var(--theme-text-primary, #140f29);
+    }
+
+    &::placeholder {
+        color: var(--theme-text-secondary, #6c757d);
+    }
+}
+
+.form-text {
+    color: var(--theme-text-secondary, #6c757d);
+}
