@@ -87,7 +87,7 @@ section.resume-section-cover {
 }
 
 section.resume-section-with-divider {
-    border-bottom: 1px solid $nav-background;
+    border-bottom: 1px solid var(--theme-nav-background);
 }
 
 div.resume-section-content {

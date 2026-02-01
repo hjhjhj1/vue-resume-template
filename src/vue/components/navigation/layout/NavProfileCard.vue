@@ -47,7 +47,7 @@ div.nav-profile-card {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    color: $nav-contrast;
+    color: var(--theme-nav-text);
     position: relative;
 
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
@@ -88,7 +88,7 @@ h4.nav-profile-card-title {
     letter-spacing: 0.15rem;
     font-size: 1.25rem;
     text-align: center;
-    
+
     @media (max-height: 660px) {
         margin-top: 15px;
         font-size: 1.175rem;
@@ -112,7 +112,7 @@ h4.nav-profile-card-title {
 
 h6.nav-profile-card-role {
     font-size: 1rem;
-    color: $nav-highlight;
+    color: var(--theme-primary);
     opacity: 0.9;
     margin-bottom: 0;
 

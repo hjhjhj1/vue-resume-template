@@ -22,8 +22,8 @@ Here's a list of live versions of the template:
 
 | #     | Version                | Description                                              | URL                                                                  |
 |-------|------------------------|----------------------------------------------------------|----------------------------------------------------------------------|
-| 🟣    | Roy Sheppard (default) | Latest deployment of the template here on GitHub pages.  | [Preview](https://ryanbalieiro.github.io/vue-resume-template/)       | 
-| 🟢    | Alana Richard          | An example of how the template can be customized.        | [Preview](https://ryansandbox.github.io/alana-richard-vue-resume/)   |  
+| 🟣    | Roy Sheppard (default) | Latest deployment of the template here on GitHub pages.  | [Preview](https://ryanbalieiro.github.io/vue-resume-template/)       |
+| 🟢    | Alana Richard          | An example of how the template can be customized.        | [Preview](https://ryansandbox.github.io/alana-richard-vue-resume/)   |
 | 🔵    | Gabriel Becker         | Another example of how the template can be customized.   | [Preview](https://ryansandbox.github.io/gabriel-becker-vue-resume/)  |
 
 ## Layout and concept
@@ -84,7 +84,7 @@ Watch this step-by-step video tutorial to see exactly how to configure your resu
 | 9   | ArticleThreads and ArticleContactOptions | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=25m36s) |
 | 10  | ArticleContactForm                       | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=29m44s) |
 | 11  | Deploying on GitHub Pages                | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=34m05s) |
-| 12  | Extra deployment instructions            | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=36m20s) |   
+| 12  | Extra deployment instructions            | [Watch on YouTube](https://www.youtube.com/watch?v=QvQQK81xljw&t=36m20s) |
 
 For step-by-step setup and deployment instructions, you can also check out the following docs:
 - [CONFIGURATION.md](./docs/CONFIGURATION.md) – learn how to configure and customize the project.
@@ -107,3 +107,13 @@ Additional frameworks and plugins used include:
 Code released under the [MIT](https://opensource.org/license/mit) license, providing complete freedom for utilization. Feel free to enhance and adapt it to suit your needs.
 
 Oh... and if you like this template, don't forget to **give it a ⭐** :)
+
+2轮对话 切换主题没有效果
+导出 applyTheme 函数 - 在 useTheme.js 中添加了 applyTheme 到返回值中，解决了 "applyTheme is not a function" 错误
+修复主题初始化 - 在 ThemeManager.vue 中正确初始化主题，确保页面加载时应用保存的主题
+修复组件状态共享 - 在 ThemeSwitcher.vue 中使用 inject 从 ThemeManager 获取主题状态，而不是创建新的实例
+更新 CSS 变量应用 - 将多个组件中的硬编码颜色替换为主题 CSS 变量：
+
+3轮对话 黑色主题与黑色文字没有做区分 切换后看不清了
+最终所有修改都已通过热更新生效
+其中，自动增加了跟随系统方案，用户可以根据系统主题自动切换。完善了隐性需求

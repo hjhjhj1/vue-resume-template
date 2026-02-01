@@ -17,14 +17,14 @@
                 <ul class="text-3">
                     <li v-for="prop in localesProps">
                         <template v-if="localize(item.locales, prop, true)">
-                            <span class="text-light-7 fw-bold" v-html="'• ' + prop + ': '"/>
+                            <span class="fw-bold" style="color: var(--theme-secondary)" v-html="'• ' + prop + ': '"/>
                             <span v-html="_toDisplayFormat(localize(item.locales, prop, true))"/>
                         </template>
                     </li>
 
                     <li v-for="prop in itemProps">
                         <template v-if="_toDisplayFormat(item[prop])">
-                            <span class="text-light-7 fw-bold" v-html="'• ' + prop + ': '"/>
+                            <span class="fw-bold" style="color: var(--theme-secondary)" v-html="'• ' + prop + ': '"/>
                             <span v-html="_toDisplayFormat(item[prop])"/>
                         </template>
                     </li>
@@ -76,8 +76,8 @@ const _toDisplayFormat = (value) => {
 .article-not-found-viewer {
     display: flex;
     flex-direction: column;
-    background-color: rgba(black, 0.05);
-    border: 1px solid rgba(black, 0.1);
+    background-color: var(--theme-hover);
+    border: 1px solid var(--theme-border);
     border-radius: 5px;
     padding: 15px;
     overflow-x: auto;

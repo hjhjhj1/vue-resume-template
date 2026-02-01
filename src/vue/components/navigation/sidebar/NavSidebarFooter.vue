@@ -3,6 +3,9 @@
         <div class="nav-sidebar-footer-language-picker-wrapper">
             <LanguagePicker :shrink="shrink"/>
         </div>
+        <div class="nav-sidebar-footer-theme-switcher-wrapper">
+            <ThemeSwitcher :shrink="shrink"/>
+        </div>
         <div v-if="!shrink"
              class="nav-sidebar-footer-credits">
             <span v-html="credits"/>
@@ -12,6 +15,7 @@
 
 <script setup>
 import LanguagePicker from "/src/vue/components/widgets/LanguagePicker.vue"
+import ThemeSwitcher from "/src/vue/components/widgets/ThemeSwitcher.vue"
 
 const props = defineProps({
     credits: String,
@@ -43,10 +47,17 @@ div.nav-sidebar-footer-language-picker-wrapper {
     }
 }
 
+div.nav-sidebar-footer-theme-switcher-wrapper {
+    padding-bottom: 5px;
+    @media (max-height: 650px) {
+        padding-bottom: 0;
+    }
+}
+
 div.nav-sidebar-footer-credits {
     width: 100%;
     text-align: center;
-    color: $light-5;
+    color: var(--theme-secondary);
     font-size: 0.9rem;
 
     @media (max-height: 650px) {

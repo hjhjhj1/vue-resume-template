@@ -91,8 +91,8 @@ $article-timeline-border-width: 7px;
 $article-timeline-border-width-md: 6px;
 $article-timeline-border-width-sm: 5px;
 
-$article-timeline-border-color: $light-3;
-$article-timeline-line-color: $light-4;
+$article-timeline-border-color: var(--theme-border);
+$article-timeline-line-color: var(--theme-border);
 $article-timeline-line-width: 3px;
 
 /** ArticleThread Parameters **/

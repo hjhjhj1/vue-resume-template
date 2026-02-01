@@ -27,7 +27,8 @@
                 </div>
             </div>
 
-            <p class="text-3 text-light-7 p-0 m-0"
+            <p class="text-3 p-0 m-0"
+               style="color: var(--theme-secondary)"
                v-html="localize(item.locales, 'description')"/>
 
             <ArticleWidgetLinkList  v-if="links && links.length"

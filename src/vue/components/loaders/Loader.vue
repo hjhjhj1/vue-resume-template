@@ -233,7 +233,7 @@ div.resume-loader {
     justify-content: center;
     align-items: center;
 
-    background-color: $loader-background;
+    background-color: var(--theme-nav-background);
     width: 100vw;
     height: 125vh;
     height: 125svh;
@@ -255,7 +255,7 @@ div.resume-loader {
 }
 
 div.resume-loader-content {
-    color: $light;
+    color: var(--theme-card);
     text-align: center;
     padding-bottom: 5rem;
 }
@@ -283,7 +283,7 @@ div.resume-loader-progress-display {
     }
 
     p {
-        color: $light;
+        color: var(--theme-card);
         margin-bottom: 5px;
         font-family: sans-serif;
     }

@@ -51,7 +51,7 @@ div.contact-form-thank-you {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px dashed rgba(black, 0.1);
+    border: 1px dashed var(--theme-border);
     width: 100%;
     padding: 40px 30px;
     border-radius: $default-border-radius;

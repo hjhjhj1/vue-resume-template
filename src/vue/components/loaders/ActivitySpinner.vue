@@ -47,6 +47,6 @@ img.resume-spinner {
 }
 
 h5 {
-    color: $light-5;
+    color: var(--theme-secondary);
 }
 </style>

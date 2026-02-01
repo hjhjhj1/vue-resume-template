@@ -25,8 +25,8 @@ ul.tags {
 
 li.tag-item {
     display: inline-flex;
-    background-color: $primary;
-    color: $white;
+    background-color: var(--theme-primary);
+    color: var(--theme-card);
     border-radius: 5px;
     text-transform: lowercase;
     white-space: nowrap;

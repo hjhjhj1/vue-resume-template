@@ -185,25 +185,25 @@ input, textarea {
 
 /** --------------- COLORS --------------- **/
 input, textarea {
-    background-color: lighten($default-section-background, 3%);
-    border-color: $light-3;
+    background-color: var(--theme-card);
+    border-color: var(--theme-border);
     border-width: 2px;
-    color: $dark;
+    color: var(--theme-text);
     transition: none;
 
     &:focus {
-        background-color: lighten($default-section-background, 4%);
-        border-color: $primary;
-        color: $dark;
+        background-color: var(--theme-hover);
+        border-color: var(--theme-primary);
+        color: var(--theme-text);
         box-shadow: none;
     }
 }
 
 span.input-group-attach {
     transition: 0.1s color ease-out;
-    background-color: lighten($light-3, 1%);
-    border-color: $light-3;
-    color: $light-7;
+    background-color: var(--theme-border);
+    border-color: var(--theme-border);
+    color: var(--theme-secondary);
 }
 
 input {
@@ -211,27 +211,26 @@ input {
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus,
     &:-webkit-autofill:active{
-        -webkit-box-shadow: 0 0 0 0px $light-2 inset !important;
-        -webkit-text-fill-color: $dark !important;
-        color: $dark!important;
+        -webkit-box-shadow: 0 0 0 0px var(--theme-hover) inset !important;
+        -webkit-text-fill-color: var(--theme-text) !important;
+        color: var(--theme-text)!important;
         transition: background-color 5000s ease-in-out 0s;
     }
 
     &:-webkit-autofill:focus {
-        border-color: $primary;
+        border-color: var(--theme-primary);
     }
 }
 
 div.form-group-focused {
     span.input-group-attach {
-        background-color: $primary;
-        border-color: $primary;
-        color: $light-1;
+        background-color: var(--theme-primary);
+        border-color: var(--theme-primary);
+        color: var(--theme-card);
     }
 }
 
-/** ----------- PLACEHOLDERS ------------- **/
-$input-placeholder-text-color: $light-4;
+$input-placeholder-text-color: var(--theme-secondary);
 
 ::-webkit-input-placeholder {
     --font-size: 1rem;

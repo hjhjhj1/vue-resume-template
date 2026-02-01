@@ -44,11 +44,11 @@ $texts-base-sizes: (
 
 .text {
     &-muted {
-        color: $text-muted!important;
+        color: var(--theme-secondary)!important;
     }
 
     &-default {
-        color: $text-default-color!important;
+        color: var(--theme-text)!important;
     }
 
     @for $i from 1 through length($light-shades-palette) {

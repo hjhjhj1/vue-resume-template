@@ -47,7 +47,7 @@ nav.nav-mobile-section-picker {
         height: $nav-section-picker-height-compressed;
     }
 
-    background-color: $nav-background;
+    background-color: var(--theme-nav-background);
 
     display: flex;
     justify-content: space-evenly;
@@ -70,13 +70,15 @@ button.nav-picker-pill {
     padding: 5px;
 
     border: none;
-    border-top: 2px solid lighten($nav-background, 5%);
-    background-color: $nav-background;
-    color: $nav-contrast-40;
+    border-top: 2px solid var(--theme-border);
+    background-color: var(--theme-nav-background);
+    color: var(--theme-nav-text);
+    opacity: 0.6;
     font-size: 0.9rem;
 
     i {
-        color: $nav-contrast-20;
+        color: var(--theme-nav-text);
+        opacity: 0.8;
         margin-right: 5px;
         @include media-breakpoint-down(sm) {
             font-size: 1rem;
@@ -97,13 +99,13 @@ button.nav-picker-pill:hover {
 }
 
 button.nav-picker-pill-selected {
-    background-color: $nav-background-selected;
-    border-top-color: $nav-selected;
+    background-color: var(--theme-nav-background);
+    border-top-color: var(--theme-primary);
     i {
-        color: $nav-selected!important;
+        color: var(--theme-primary)!important;
     }
     span {
-        color: $nav-highlight!important;
+        color: var(--theme-primary)!important;
     }
 }
 </style>

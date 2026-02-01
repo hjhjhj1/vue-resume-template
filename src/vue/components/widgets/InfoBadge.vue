@@ -21,8 +21,8 @@ div.info-badge {
     align-items: center;
     justify-content: start;
 
-    background-color: lighten($default-section-background, 3%);
-    border: 1px solid rgba(black, 0.1);
+    background-color: var(--theme-card);
+    border: 1px solid var(--theme-border);
     border-radius: $default-border-radius;
     white-space: nowrap;
 
@@ -56,10 +56,10 @@ div.info-badge {
 }
 
 div.info-badge-variant-nav {
-    background-color: $nav-background;
-    color: $light;
+    background-color: var(--theme-nav-background);
+    color: var(--theme-nav-text);
     i {
-        color: $light;
+        color: var(--theme-nav-text);
         opacity: 0.6;
     }
 }

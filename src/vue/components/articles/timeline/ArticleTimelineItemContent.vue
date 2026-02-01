@@ -16,11 +16,13 @@
         </div>
 
         <div class="timeline-item-content-body">
-            <p class="text-4 text-default description m-0"
+            <p class="text-4 description m-0"
+               style="color: var(--theme-text)"
                v-html="description"/>
 
             <p v-if="list && list.title"
-               class="text-4 text-default list-title m-0 mt-2"
+               class="text-4 list-title m-0 mt-2"
+               style="color: var(--theme-text)"
                v-html="list.title"/>
 
             <ul v-if="list && list.items && list.items.length"
