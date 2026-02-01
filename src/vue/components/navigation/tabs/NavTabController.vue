@@ -88,7 +88,8 @@ nav.nav-mobile-tab-controller {
     position: fixed;
     width: 100%;
     height: $nav-tab-controller-height;
-    background-color: $nav-background;
+    background-color: var(--nav-background-color, $nav-background);
+    transition: background-color 0.3s ease;
     bottom: 0;
     left: 0;
     z-index: $z-index-tab-controller;
@@ -121,7 +122,7 @@ button.nav-mobile-tab-button {
     background-color: transparent;
     border: 0;
     outline: none;
-    border-top: 2px solid lighten($nav-background, 20%);
+    border-top: 2px solid var(--nav-border-color, lighten($nav-background, 20%));
     transition: 0.1s padding-bottom ease-out;
 
     i {
@@ -150,7 +151,7 @@ button.nav-mobile-tab-button:hover {
 }
 
 button.nav-mobile-tab-button-selected {
-    background-color: $nav-background-selected;
+    background-color: var(--nav-background-selected, $nav-background-selected);
     border-top-color: $nav-selected;
     i {
         color: $nav-selected!important;

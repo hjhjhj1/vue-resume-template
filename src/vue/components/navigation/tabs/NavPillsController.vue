@@ -47,7 +47,8 @@ nav.nav-mobile-section-picker {
         height: $nav-section-picker-height-compressed;
     }
 
-    background-color: $nav-background;
+    background-color: var(--nav-background-color, $nav-background);
+    transition: background-color 0.3s ease;
 
     display: flex;
     justify-content: space-evenly;
@@ -70,8 +71,8 @@ button.nav-picker-pill {
     padding: 5px;
 
     border: none;
-    border-top: 2px solid lighten($nav-background, 5%);
-    background-color: $nav-background;
+    border-top: 2px solid var(--nav-border-color, lighten($nav-background, 5%));
+    background-color: var(--nav-background-color, $nav-background);
     color: $nav-contrast-40;
     font-size: 0.9rem;
 
@@ -97,7 +98,7 @@ button.nav-picker-pill:hover {
 }
 
 button.nav-picker-pill-selected {
-    background-color: $nav-background-selected;
+    background-color: var(--nav-background-selected, $nav-background-selected);
     border-top-color: $nav-selected;
     i {
         color: $nav-selected!important;

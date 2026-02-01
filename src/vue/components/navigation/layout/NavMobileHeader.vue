@@ -32,7 +32,8 @@ const localize = inject("localize")
 @import "/src/scss/_theming.scss";
 
 nav.nav-mobile-header {
-    background-color: $nav-background;
+    background-color: var(--nav-background-color, $nav-background);
+    transition: background-color 0.3s ease;
     @include media-breakpoint-up($navigation-sidebar-breakpoint) {
         display: none;
     }
