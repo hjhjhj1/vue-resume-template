@@ -129,12 +129,17 @@ const infoListItems = computed(() => {
 div.timeline-item-content {
     flex-grow: 1;
     margin-left: 20px;
+    color: var(--theme-text-primary, $text-default-color);
     @include media-breakpoint-down(md) {
         margin-left: 16px;
     }
     @include media-breakpoint-down(sm) {
         margin-left: 12px;
     }
+}
+
+div.timeline-item-content h4 {
+    color: var(--theme-text-primary, $text-default-color);
 }
 
 div.timeline-item-content-header {

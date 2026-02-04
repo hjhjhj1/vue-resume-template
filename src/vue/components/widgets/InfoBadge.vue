@@ -21,8 +21,8 @@ div.info-badge {
     align-items: center;
     justify-content: start;
 
-    background-color: lighten($default-section-background, 3%);
-    border: 1px solid rgba(black, 0.1);
+    background-color: var(--theme-bg-card, lighten($default-section-background, 3%));
+    border: 1px solid var(--theme-border-color, rgba(black, 0.1));
     border-radius: $default-border-radius;
     white-space: nowrap;
 
@@ -31,7 +31,7 @@ div.info-badge {
 
     i {
         margin-right: 5px;
-        color: $nav-background-selected;
+        color: var(--theme-primary, $nav-background-selected);
     }
 
     span {
@@ -56,10 +56,10 @@ div.info-badge {
 }
 
 div.info-badge-variant-nav {
-    background-color: $nav-background;
-    color: $light;
+    background-color: var(--theme-bg-sidebar, $nav-background);
+    color: var(--theme-text-light, $light);
     i {
-        color: $light;
+        color: var(--theme-text-light, $light);
         opacity: 0.6;
     }
 }

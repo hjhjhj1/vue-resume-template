@@ -66,14 +66,14 @@ div.timeline-item-icon {
     min-width: $article-timeline-image-size;
     height: $article-timeline-image-size;
     font-size: calc($article-timeline-image-size/2.5);
-    border: $article-timeline-border-width solid $article-timeline-border-color;
+    border: $article-timeline-border-width solid var(--theme-timeline-border, $article-timeline-border-color);
 
     z-index: 1;
     border-radius: 100%;
     overflow: hidden;
     user-select: none;
     pointer-events: none;
-    background-color: $article-timeline-line-color;
+    background-color: var(--theme-timeline-line, $article-timeline-line-color);
 
     @include media-breakpoint-down(md) {
         width: $article-timeline-image-size-md;

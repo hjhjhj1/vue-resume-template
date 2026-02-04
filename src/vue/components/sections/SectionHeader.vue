@@ -79,6 +79,6 @@ h1.title {
 }
 
 p.lead {
-    color: $text-muted;
+    color: var(--theme-text-muted, $text-muted);
 }
 </style>

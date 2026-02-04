@@ -98,7 +98,8 @@ div.modal {
 }
 
 div.modal-content {
-    background-color: $light-1;
+    background-color: var(--theme-bg-card, $light-1);
+    color: var(--theme-text-primary, $text-default-color);
 
     &-bg-transparent {
         background-color: transparent;

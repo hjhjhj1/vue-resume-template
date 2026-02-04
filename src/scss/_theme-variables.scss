@@ -1,0 +1,129 @@
+/**
+ * 主题变量定义
+ * 支持浅色/深色模式切换，带有平滑过渡动画
+ */
+
+// ===== 浅色主题变量（默认）=====
+:root,
+html[data-theme="light"] {
+    // 主要颜色
+    --theme-primary: #7e45dc;
+    --theme-primary-light: #9a6ae3;
+    --theme-primary-dark: #6334b3;
+    
+    // 背景颜色
+    --theme-bg-body: #f1eff3;
+    --theme-bg-section: #ffffff;
+    --theme-bg-card: #ffffff;
+    --theme-bg-sidebar: #140f29;
+    --theme-bg-loader: #261841;
+    
+    // 文字颜色
+    --theme-text-primary: #140f29;
+    --theme-text-secondary: #495057;
+    --theme-text-muted: #6c757d;
+    --theme-text-light: #fcfcfc;
+    
+    // 边框和分割线
+    --theme-border-color: #dee2e6;
+    --theme-divider-color: #ced4da;
+    
+    // 阴影
+    --theme-shadow-sm: rgba(0, 0, 0, 0.05);
+    --theme-shadow-md: rgba(0, 0, 0, 0.1);
+    --theme-shadow-lg: rgba(0, 0, 0, 0.15);
+    
+    // 时间线/线程
+    --theme-timeline-border: #dee2e6;
+    --theme-timeline-line: #ced4da;
+    
+    // 进度条背景
+    --theme-progress-bg: #e9ecef;
+    
+    // Chart.js 颜色 - 浅色模式下使用浅色背景
+    --chart-js-border-color: #f1eff3;
+    --chart-js-hover-border-color: #fcfcfc;
+    
+    // 导航颜色
+    --nav-background-color: #140f29;
+}
+
+// ===== 深色主题变量 =====
+html[data-theme="dark"] {
+    // 主要颜色
+    --theme-primary: #9a6ae3;
+    --theme-primary-light: #b08eea;
+    --theme-primary-dark: #7e45dc;
+    
+    // 背景颜色
+    --theme-bg-body: #0d0b14;
+    --theme-bg-section: #1a1625;
+    --theme-bg-card: #252236;
+    --theme-bg-sidebar: #0d0b14;
+    --theme-bg-loader: #0d0b14;
+    
+    // 文字颜色
+    --theme-text-primary: #f1eff3;
+    --theme-text-secondary: #b8b5c4;
+    --theme-text-muted: #8b8899;
+    --theme-text-light: #fcfcfc;
+    
+    // 边框和分割线
+    --theme-border-color: #3a3548;
+    --theme-divider-color: #4a4558;
+    
+    // 阴影
+    --theme-shadow-sm: rgba(0, 0, 0, 0.2);
+    --theme-shadow-md: rgba(0, 0, 0, 0.3);
+    --theme-shadow-lg: rgba(0, 0, 0, 0.4);
+    
+    // 时间线/线程
+    --theme-timeline-border: #3a3548;
+    --theme-timeline-line: #4a4558;
+    
+    // 进度条背景
+    --theme-progress-bg: #3a3548;
+    
+    // Chart.js 颜色 - 深色模式下使用深色背景
+    --chart-js-border-color: #1a1625;
+    --chart-js-hover-border-color: #252236;
+    
+    // 导航颜色
+    --nav-background-color: #0d0b14;
+}
+
+// ===== 过渡动画 =====
+// 应用于所有需要平滑过渡的主题相关属性
+html[data-theme],
+html[data-theme] body,
+html[data-theme] .section,
+html[data-theme] .skills-item,
+html[data-theme] .article,
+html[data-theme] .nav-sidebar,
+html[data-theme] .nav-sidebar-footer,
+html[data-theme] .progress,
+html[data-theme] .progress-bar,
+html[data-theme] .article-timeline-item,
+html[data-theme] .article-thread-item,
+html[data-theme] .modal-content,
+html[data-theme] .form-control,
+html[data-theme] .form-select {
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+// 确保 SVG 元素不参与颜色过渡（避免影响技能进度条颜色计算）
+html[data-theme] svg,
+html[data-theme] svg *,
+html[data-theme] .skills-pie-chart canvas,
+html[data-theme] .skills-item-progress-display-fill {
+    transition: none !important;
+}
+
+// 技能进度条颜色计算不受影响
+.skills-item-progress-display-fill {
+    // 保持原有的内联样式优先级，不受主题变量影响
+    background-color: inherit;
+}

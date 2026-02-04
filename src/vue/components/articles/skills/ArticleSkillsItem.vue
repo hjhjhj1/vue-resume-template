@@ -162,7 +162,7 @@ div.skills-item-icon {
             sm:     (border-width:0),
         ));
 
-        border: 4px solid $default-section-background;
+        border: 4px solid var(--theme-bg-body, $default-section-background);
     }
 
     &-shrink {
@@ -211,12 +211,13 @@ div.skills-item-progress-display {
     ));
 
     width: 100%;
-    background-color: rgba($dark, 0.05);
-    border: 1px solid rgba(black, 0.1);
+    background-color: var(--theme-progress-bg, rgba($dark, 0.05));
+    border: 1px solid var(--theme-border-color, rgba(black, 0.1));
     padding: 1px;
 
     div.skills-item-progress-display-fill {
-        background-color: $primary;
+        // 使用内联样式设置颜色，确保不受主题切换影响
+        // 颜色值来自 item.fallbackFaIconColor
         height: 100%;
     }
 }

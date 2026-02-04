@@ -93,12 +93,12 @@ div.thread-item-circle {
     justify-content: center;
     z-index: 2;
 
-    background-color: lighten($article-thread-line-color, 4%);
-    color: lighten($article-thread-line-color, 20%);
+    background-color: var(--theme-timeline-line, lighten($article-thread-line-color, 4%));
+    color: var(--theme-timeline-border, lighten($article-thread-line-color, 20%));
     border-radius: 100%;
 
     &-fill {
-        background-color: lighten($article-thread-line-color, 20%);
+        background-color: var(--theme-timeline-border, lighten($article-thread-line-color, 20%));
         border-radius: 100%;
     }
 
@@ -124,7 +124,7 @@ li.thread-item-trailing {
     min-height: 0;
 
     div.thread-item-circle {
-        background-color: lighten($article-thread-line-color, 3%);
+        background-color: var(--theme-timeline-line, lighten($article-thread-line-color, 3%));
         &-fill { display: none; }
 
         @each $breakpoint, $multiplier in $article-thread-scale-multipliers {
@@ -142,12 +142,17 @@ li.thread-item-trailing {
 
 div.thread-item-content {
     width: 100%;
+    color: var(--theme-text-primary, $text-default-color);
     @each $breakpoint, $multiplier in $article-thread-scale-multipliers {
         @include media-breakpoint-down($breakpoint) {
             margin-left: calc(15px * $multiplier);
             margin-top: calc(3px * $multiplier);
         }
     }
+}
+
+div.thread-item-content h5 {
+    color: var(--theme-text-primary, $text-default-color);
 }
 
 div.thread-item-content-header {

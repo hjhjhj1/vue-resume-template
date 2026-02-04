@@ -74,6 +74,7 @@ h1.title {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 3px;
+    color: var(--theme-text-primary, $text-default-color);
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
         display: none;
     }

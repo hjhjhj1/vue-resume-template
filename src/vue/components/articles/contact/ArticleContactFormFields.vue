@@ -185,25 +185,25 @@ input, textarea {
 
 /** --------------- COLORS --------------- **/
 input, textarea {
-    background-color: lighten($default-section-background, 3%);
-    border-color: $light-3;
+    background-color: var(--theme-bg-card, lighten($default-section-background, 3%));
+    border-color: var(--theme-border-color, $light-3);
     border-width: 2px;
-    color: $dark;
-    transition: none;
+    color: var(--theme-text-primary, $dark);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 
     &:focus {
-        background-color: lighten($default-section-background, 4%);
-        border-color: $primary;
-        color: $dark;
+        background-color: var(--theme-bg-section, lighten($default-section-background, 4%));
+        border-color: var(--theme-primary, $primary);
+        color: var(--theme-text-primary, $dark);
         box-shadow: none;
     }
 }
 
 span.input-group-attach {
-    transition: 0.1s color ease-out;
-    background-color: lighten($light-3, 1%);
-    border-color: $light-3;
-    color: $light-7;
+    transition: 0.1s color ease-out, background-color 0.3s ease, border-color 0.3s ease;
+    background-color: var(--theme-progress-bg, lighten($light-3, 1%));
+    border-color: var(--theme-border-color, $light-3);
+    color: var(--theme-text-muted, $light-7);
 }
 
 input {
@@ -211,28 +211,26 @@ input {
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus,
     &:-webkit-autofill:active{
-        -webkit-box-shadow: 0 0 0 0px $light-2 inset !important;
-        -webkit-text-fill-color: $dark !important;
-        color: $dark!important;
+        -webkit-box-shadow: 0 0 0 0px var(--theme-bg-body, $light-2) inset !important;
+        -webkit-text-fill-color: var(--theme-text-primary, $dark) !important;
+        color: var(--theme-text-primary, $dark)!important;
         transition: background-color 5000s ease-in-out 0s;
     }
 
     &:-webkit-autofill:focus {
-        border-color: $primary;
+        border-color: var(--theme-primary, $primary);
     }
 }
 
 div.form-group-focused {
     span.input-group-attach {
-        background-color: $primary;
-        border-color: $primary;
-        color: $light-1;
+        background-color: var(--theme-primary, $primary);
+        border-color: var(--theme-primary, $primary);
+        color: var(--theme-text-light, $light-1);
     }
 }
 
 /** ----------- PLACEHOLDERS ------------- **/
-$input-placeholder-text-color: $light-4;
-
 ::-webkit-input-placeholder {
     --font-size: 1rem;
     @include media-breakpoint-down(lg) {
@@ -240,29 +238,29 @@ $input-placeholder-text-color: $light-4;
     }
 
     font-size: var(--font-size);
-    color: $input-placeholder-text-color;
+    color: var(--theme-text-muted, $light-4);
 }
 
 *:-moz-placeholder {
     /* FF 4-18 */
-    color: $input-placeholder-text-color!important;
+    color: var(--theme-text-muted, $light-4)!important;
     opacity: 1;
 }
 *::-moz-placeholder {
     /* FF 19+ */
-    color: $input-placeholder-text-color!important;
+    color: var(--theme-text-muted, $light-4)!important;
     opacity: 1;
 }
 *:-ms-input-placeholder {
     /* IE 10+ */
-    color: $input-placeholder-text-color!important;
+    color: var(--theme-text-muted, $light-4)!important;
 }
 *::-ms-input-placeholder {
     /* Microsoft Edge */
-    color: $input-placeholder-text-color!important;
+    color: var(--theme-text-muted, $light-4)!important;
 }
 *::placeholder {
     /* modern browser */
-    color: $input-placeholder-text-color!important;
+    color: var(--theme-text-muted, $light-4)!important;
 }
 </style>
