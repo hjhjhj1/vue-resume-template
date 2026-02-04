@@ -29,7 +29,17 @@
             "view_more_info": "View More Info",
             "view_on_app_store": "App Store",
             "view_on_google_play": "Google Play",
-            "view_on_windows_store": "Windows Store"
+            "view_on_windows_store": "Windows Store",
+            "print": "Print",
+            "print_resume": "Print Resume",
+            "print_direct": "Print Directly",
+            "print_preview": "Print Preview",
+            "print_preview_title": "Print Preview",
+            "print_preview_info": "This is how your resume will look when printed. Use the buttons above to print or export as PDF.",
+            "export_pdf": "Export PDF",
+            "refresh": "Refresh",
+            "close": "Close",
+            "scale": "Scale"
         },
         "es": {
             "about": "Acerca de",
@@ -60,7 +70,17 @@
             "view_more_info": "Ver más información",
             "view_on_app_store": "App Store",
             "view_on_google_play": "Google Play",
-            "view_on_windows_store": "Windows Store"
+            "view_on_windows_store": "Windows Store",
+            "print": "Imprimir",
+            "print_resume": "Imprimir CV",
+            "print_direct": "Imprimir Directamente",
+            "print_preview": "Vista Previa",
+            "print_preview_title": "Vista Previa de Impresión",
+            "print_preview_info": "Así es como se verá tu CV al imprimirlo. Usa los botones de arriba para imprimir o exportar como PDF.",
+            "export_pdf": "Exportar PDF",
+            "refresh": "Actualizar",
+            "close": "Cerrar",
+            "scale": "Escala"
         },
         "fr": {
             "about": "À propos",
@@ -91,7 +111,17 @@
             "view_more_info": "Voir plus d'informations",
             "view_on_app_store": "App Store",
             "view_on_google_play": "Google Play",
-            "view_on_windows_store": "Windows Store"
+            "view_on_windows_store": "Windows Store",
+            "print": "Imprimer",
+            "print_resume": "Imprimer CV",
+            "print_direct": "Imprimer Directement",
+            "print_preview": "Aperçu",
+            "print_preview_title": "Aperçu d'Impression",
+            "print_preview_info": "Voici à quoi ressemblera votre CV lors de l'impression. Utilisez les boutons ci-dessus pour imprimer ou exporter en PDF.",
+            "export_pdf": "Exporter PDF",
+            "refresh": "Actualiser",
+            "close": "Fermer",
+            "scale": "Échelle"
         },
         "zh": {
             "about": "关于",
@@ -122,7 +152,17 @@
             "view_more_info": "查看更多信息",
             "view_on_app_store": "App Store",
             "view_on_google_play": "Google Play",
-            "view_on_windows_store": "Windows Store"
+            "view_on_windows_store": "Windows Store",
+            "print": "打印",
+            "print_resume": "打印简历",
+            "print_direct": "直接打印",
+            "print_preview": "打印预览",
+            "print_preview_title": "打印预览",
+            "print_preview_info": "这是您的简历打印时的效果。使用上方按钮进行打印或导出为 PDF。",
+            "export_pdf": "导出 PDF",
+            "refresh": "刷新",
+            "close": "关闭",
+            "scale": "缩放"
         }
     }
 }

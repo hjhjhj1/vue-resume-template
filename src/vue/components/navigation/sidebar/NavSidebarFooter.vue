@@ -1,5 +1,12 @@
 <template>
     <div class="nav-sidebar-footer">
+        <div class="nav-sidebar-footer-actions">
+            <PrintButton
+                variant="transparent"
+                :show-label="false"
+                :show-dropdown="false"
+                @click="_onPrintClick"/>
+        </div>
         <div class="nav-sidebar-footer-language-picker-wrapper">
             <LanguagePicker :shrink="shrink"/>
         </div>
@@ -12,11 +19,16 @@
 
 <script setup>
 import LanguagePicker from "/src/vue/components/widgets/LanguagePicker.vue"
+import PrintButton from "/src/vue/components/widgets/PrintButton.vue"
 
 const props = defineProps({
     credits: String,
     shrink: Boolean
 })
+
+const _onPrintClick = () => {
+    // PrintButton handles its own click event
+}
 </script>
 
 <style lang="scss" scoped>
@@ -55,6 +67,17 @@ div.nav-sidebar-footer-credits {
 
     @media (max-height: $nav-sidebar-footer-compress-screen-height) {
         display: none;
+    }
+}
+
+div.nav-sidebar-footer-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    @media (max-height: $nav-sidebar-footer-compress-screen-height) {
+        margin-bottom: 5px;
     }
 }
 </style>
