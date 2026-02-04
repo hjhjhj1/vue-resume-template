@@ -30,13 +30,14 @@ h3.article-title {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0;
+    color: var(--theme-text-primary, $text-default-color);
     @include media-breakpoint-down(md) {
         letter-spacing: 0;
     }
 
     i {
         opacity: 0.95;
-        color: $nav-background-selected;
+        color: var(--theme-primary, $nav-background-selected);
     }
 }
 </style>

@@ -56,6 +56,8 @@ const visible = computed(() => {
 section.resume-section {
     display: flex;
     min-height: 100vh;
+    background-color: var(--theme-bg-body, $default-section-background);
+    color: var(--theme-text-primary, $text-default-color);
 
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
         min-height: calc(100vh - $nav-tab-controller-height - 220px);
@@ -87,7 +89,7 @@ section.resume-section-cover {
 }
 
 section.resume-section-with-divider {
-    border-bottom: 1px solid $nav-background;
+    border-bottom: 1px solid var(--theme-border-color, $nav-background);
 }
 
 div.resume-section-content {

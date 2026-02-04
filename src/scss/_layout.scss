@@ -4,15 +4,15 @@ html {
 }
 
 body {
-    background-color: $loader-background;
+    background-color: var(--theme-bg-loader, $loader-background);
 }
 
 body.body-default {
-    background-color: $default-section-background;
+    background-color: var(--theme-bg-body, $default-section-background);
 }
 
 body.body-nav-contrast {
-    background-color: darken($nav-background, 3%)!important;
+    background-color: var(--theme-bg-sidebar, darken($nav-background, 3%))!important;
 }
 
 /** ----------- SELECTION ------------- **/

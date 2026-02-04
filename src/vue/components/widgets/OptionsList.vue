@@ -68,6 +68,7 @@ div.options-list-item {
         text-transform: capitalize;
         font-weight: bold;
         margin-top: 2px;
+        color: var(--theme-text-primary, $text-default-color);
     }
 }
 </style>

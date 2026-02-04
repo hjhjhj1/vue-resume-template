@@ -39,15 +39,16 @@ const style = computed(() => {
 div.progress {
     height: 5px;
     border-radius: $default-border-radius;
-    background-color: lighten($light-3, 2%);
+    background-color: var(--theme-progress-bg, lighten($light-3, 2%));
 }
 
 div.progress-bar {
-    background-color: $primary;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -ms-transition: none;
-    -o-transition: none;
-    transition: none;
+    background-color: var(--theme-primary, $primary);
+    // 禁用过渡动画，避免影响技能进度条的颜色计算
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -ms-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
+    transition: width 0.3s ease;
 }
 </style>
