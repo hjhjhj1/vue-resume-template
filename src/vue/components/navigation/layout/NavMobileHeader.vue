@@ -8,6 +8,13 @@
                         :include-toggle-button="false"
                         @toggle="null"/>
 
+        <div class="nav-mobile-actions">
+            <PrintButton
+                variant="transparent"
+                :show-label="false"
+                :show-dropdown="false"/>
+        </div>
+
         <LanguagePicker :shrink="true"
                         :class="utils.isChromeOS() ? `language-picker-left` : `language-picker-right`"/>
     </nav>
@@ -17,6 +24,7 @@
 import {inject} from "vue"
 import NavProfileCard from "/src/vue/components/navigation/layout/NavProfileCard.vue"
 import LanguagePicker from "/src/vue/components/widgets/LanguagePicker.vue"
+import PrintButton from "/src/vue/components/widgets/PrintButton.vue"
 import {useUtils} from "/src/composables/utils.js"
 
 const utils = useUtils()
@@ -48,6 +56,16 @@ div.language-picker {
     &-left {
         left: 5px;
         right: auto;
+    }
+}
+
+div.nav-mobile-actions {
+    position: absolute;
+    top: 5px;
+    right: 50px;
+
+    @include media-breakpoint-down(sm) {
+        right: 45px;
     }
 }
 </style>
